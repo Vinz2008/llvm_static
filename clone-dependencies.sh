@@ -35,4 +35,12 @@ if [ ! -d xz ]; then
   cd ..
 fi
 
+if [ ! -d zlib ]; then
+  wget https://zlib.net/zlib-1.3.1.tar.xz -O zlib.tar.gz
+  mkdir zlib
+  cd zlib
+  tar -xvf ../zlib.tar.gz --strip-components=1
+  cd ..
+fi
+
 rm -f *.tar.xz *.tar.gz

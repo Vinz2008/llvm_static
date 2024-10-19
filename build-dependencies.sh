@@ -49,4 +49,10 @@ $MAKE
 $MAKE install
 cd ..
 
-#rm -f $DEPENDENCIES_SYSROOT/usr/lib/*.so $DEPENDENCIES_SYSROOT/usr/lib/*.so.* $DEPENDENCIES_SYSROOT/usr/lib/*.la
+cd zlib
+./configure --prefix=$DEPENDENCIES_SYSROOT/usr
+$MAKE
+$MAKE install
+cd ..
+
+rm -f $DEPENDENCIES_SYSROOT/usr/lib/*.so $DEPENDENCIES_SYSROOT/usr/lib/*.so.* $DEPENDENCIES_SYSROOT/usr/lib/*.la
